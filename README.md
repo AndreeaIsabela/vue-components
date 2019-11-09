@@ -1,2 +1,2 @@
 # vue-components
-Reusable vue.js component.
+Reusable vue.js components.
