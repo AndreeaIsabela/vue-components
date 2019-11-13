@@ -1,12 +1,19 @@
 <template lang="pug">
   #app
+    sidebar
     router-view
 </template>
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
 
-@Component({})
+import Sidebar from './components/sidebar/Sidebar';
+
+@Component({
+  components: {
+    Sidebar,
+  },
+})
 export default class App extends Vue {
   /**
    * Class constructor.

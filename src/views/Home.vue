@@ -1,6 +1,6 @@
 <template lang="pug">
   .home
-    h1 Home
+    h1 This is the home component
 </template>
 
 <script lang="ts">
