@@ -7,7 +7,7 @@
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
 
-import Sidebar from './components/sidebar/Sidebar';
+import Sidebar from './components/sidebar/Sidebar.vue';
 
 @Component({
   components: {
@@ -18,9 +18,9 @@ export default class App extends Vue {
   /**
    * Class constructor.
    */
-  // constructor() {
-  //   super();
-  // }
+  constructor() {
+    super();
+  }
 }
 </script>
 

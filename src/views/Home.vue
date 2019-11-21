@@ -6,12 +6,13 @@
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
 
+@Component({})
 export default class Home extends Vue {
   /**
    * Class constructor.
    */
-  // constructor() {
-  //   super();
-  // }
+  constructor() {
+    super();
+  }
 }
 </script>
