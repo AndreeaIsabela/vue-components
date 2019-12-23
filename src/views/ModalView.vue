@@ -53,6 +53,7 @@ export default class ModalView extends Vue {
 
 <style lang="stylus" scoped>
   textarea
+    margin 10px 0
     -webkit-box-shadow 0px 0px 6px -1px rgba(189, 187, 189, 1)
     -moz-box-shadow 0px 0px 6px -1px rgba(189, 187, 189, 1)
     box-shadow 0px 0px 6px -1px rgba(189, 187, 189, 1)
@@ -89,6 +90,7 @@ export default class ModalView extends Vue {
     border-radius: 2px
     padding: 4px 20px
     font-size: x-small
+    float right
   #openModal
     margin: 100px;
 </style>
