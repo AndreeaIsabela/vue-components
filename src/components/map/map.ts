@@ -24,7 +24,9 @@ export default class CustomMap extends Vue {
 
   @Watch('searchedAddress')
   onSearchedAddressChange(newVal: string) {
-    this.geocodeAddressToLatLng(newVal);
+    if(this.geocoder) {
+      this.geocodeAddressToLatLng(newVal);
+    }
   }
 
   private markers: any[] = [];
