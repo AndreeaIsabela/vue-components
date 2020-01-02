@@ -9,9 +9,12 @@
     "test:unit": "vue-cli-service test:unit"
   },
   "dependencies": {
-    "@types/load-google-maps-api": "^2.0.0",
+    "@amcharts/amcharts4": "4.5.10",
+    "@amcharts/amcharts4-geodata": "4.1.6",
+    "@types/load-google-maps-api": "2.0.0",
+    "@types/node": "^13.1.1",
     "core-js": "3.3.2",
-    "google-maps-api-loader": "^1.1.1",
+    "google-maps-api-loader": "1.1.1",
     "vue": "2.6.10",
     "vue-class-component": "7.0.2",
     "vue-property-decorator": "8.3.0",

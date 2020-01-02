@@ -1,6 +1,10 @@
 #sidebar
   ul
-    router-link(tag="li" :to="{ name: 'modalView'}")
+    router-link.text-center(tag="li" :to="{ name: 'modalView'}")
       a #[span.fa.fa-download] Modal Component
-    router-link(tag="li" :to="{ name: 'mapView'}")
+    router-link.text-center(tag="li" :to="{ name: 'mapView'}")
       a #[span.fa.fa-download] Map Component
+    router-link.text-center(tag="li" :to="{ name: 'pieChartView'}")
+      a #[span.fa.fa-download] Pie Chart Component
+    router-link.text-center(tag="li" :to="{ name: 'lineChartView'}")
+      a #[span.fa.fa-download] Line Chart Component

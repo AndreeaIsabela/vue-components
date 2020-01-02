@@ -1,7 +1,7 @@
 <template lang="pug">
   #app.d-flex
-    sidebar.p-2.col-5.flex-fill.bd-highlight
-    router-view#content.col-8.mr-2.flex-fill.bd-highlight
+    sidebar.pr-2.col-2.py-5.pl-5.flex-fill.bd-highlight
+    router-view#content.col-10.mr-2.flex-fill.bd-highlight
 </template>
 
 <script lang="ts">
@@ -26,5 +26,5 @@ export default class App extends Vue {
 
 <style lang="stylus">
 #content
-  margin-top: 100px
+  padding-top: 100px
 </style>
