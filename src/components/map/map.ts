@@ -49,9 +49,6 @@ export default class CustomMap extends Vue {
     });
     this.google = googleMapApi;
     this.initMap();
-    this.$parent.$on('MapSearch:SearchGeolocation', (locationAddress: string) => {
-      this.geocodeAddressToLatLng(locationAddress);
-    });
 
     this.$parent.$on('ElementClick:Bounce', (element: IMark) => {
       this.bounce(element);

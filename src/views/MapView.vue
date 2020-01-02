@@ -36,10 +36,10 @@ import { IMark } from '../types/IMark';
 export default class MapView extends Vue {
   public draggableMark: boolean = true;
   public getGeocode: boolean = true;
-  public country: string = '';
-  public address: string = '';
-  public city: string = '';
-  public apiKey: string = 'AIzaSyCorj-5A0oaI6unHBPrOsUVHKLpKxh1_uE';
+  public country: string = 'Romania';
+  public address: string = 'Nicolae Romanescu';
+  public city: string = 'Craiova';
+  public apiKey: string = 'your google map api';
 
   public markers: IMark[] = [
     {
