@@ -57,7 +57,7 @@ export default class ModalView extends Vue {
     -webkit-box-shadow 0px 0px 6px -1px rgba(189, 187, 189, 1)
     -moz-box-shadow 0px 0px 6px -1px rgba(189, 187, 189, 1)
     box-shadow 0px 0px 6px -1px rgba(189, 187, 189, 1)
-    width 96%
+    width 100%
     border none
     border 1px solid #cecccc
     border-radius 4px
@@ -66,11 +66,11 @@ export default class ModalView extends Vue {
     padding-left 10px
     &::placeholder
       color #cecccc
-  .modal-header,
-  .modal-footer
+  .customModal-header,
+  .customModal-footer
     padding 10px 15px 20px 15px
     display flex
-  .modal-header
+  .customModal-header
     justify-content space-between
     padding 10px 15px 10px 15px
     span
@@ -78,9 +78,9 @@ export default class ModalView extends Vue {
       color #cecccc
       font-size small
       cursor default
-  .modal-footer
+  .customModal-footer
     justify-content flex-end
-  .modal-body
+  .customModal-body
     position relative
     padding 0 25px 10px 20px
   .btn-blue
@@ -90,7 +90,7 @@ export default class ModalView extends Vue {
     border-radius: 2px
     padding: 4px 20px
     font-size: x-small
-    float right
+    float center
   #openModal
     margin: 100px;
 </style>

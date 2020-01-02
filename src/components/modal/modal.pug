@@ -1,13 +1,13 @@
 transition(name='modal-fade')
-  .modal-backdrop
-    .modal(role='dialog' aria-labelledby='modalTitle' aria-describedby='modalDescription')
-      header#modalTitle.modal-header
+  .customModal-backdrop
+    .customModal(role='dialog' aria-labelledby='modalTitle' aria-describedby='modalDescription')
+      header#modalTitle.customModal-header
         button.btn-close(type='button' @click='close' aria-label='Close modal') X
         slot(name='header')
           span Title
-      section#modalDescription.modal-body
+      section#modalDescription.customModal-body
         slot(name='body')
           span Modal body
-      footer.modal-footer
+      footer.customModal-footer
         slot(name='footer')
           span Footer
