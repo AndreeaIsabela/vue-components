@@ -1,0 +1,5 @@
+p.alert.text-left(v-bind:class="'alert-' + alertType")
+  span.icon-placeholder
+    img(width="36" height="36" :src="imgPath")
+  slot(name='body')
+    span Alert body

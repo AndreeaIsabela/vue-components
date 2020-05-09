@@ -1,0 +1,59 @@
+p.alert
+  color rgba(64,66,73,1)
+  display: block
+
+.alert
+  position: relative
+  z-index: 1
+  padding: 1.2rem 1.2rem 1.2rem 8.2rem
+  margin-bottom: 1rem
+  margin-top: 1rem
+  border-radius: 0.1875rem
+  border: 0.1rem solid
+  overflow: hidden
+  background-color: #fff
+  background-image: none
+  font-size: 1rem;
+
+.icon-placeholder
+  width: 5rem
+  position: absolute
+  left: 0
+  top: 0
+  height: 100%
+  img 
+    position: absolute
+    left: 50%
+    margin-left: -18px
+    top: 50%
+    margin-top: -18px
+
+/* Success */
+p.alert.alert-success
+  border: 1px solid #8ACB88
+  span.icon-placeholder
+    background-color: #8ACB88
+    margin-right: 20px
+
+/* Danger */
+p.alert.alert-danger
+  border: 1px solid #F47A7A
+  span.icon-placeholder
+    background-color: #F47A7A
+    margin-right: 20px
+
+/* Warning */
+.alert-warning
+  border-color #fff4d3  
+.alert-warning .icon-placeholder
+  background-color #fff4d3
+  margin-right: 20px
+
+/* Important */
+.alert-important
+  border-color #5fc2ff
+
+.alert-important .icon-placeholder
+  background-color #5fc2ff
+  margin-right: 20px
+
