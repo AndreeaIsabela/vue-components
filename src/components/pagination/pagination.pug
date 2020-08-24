@@ -1,0 +1,21 @@
+div
+  ul.pagination
+    li.pagination-item
+      button(type='button', @click='onClickFirstPage', :disabled='isInFirstPage')
+        | First
+    li.pagination-item
+      button(type='button', @click='onClickPreviousPage', :disabled='isInFirstPage')
+        | <<
+    li.pagination-item.extra(v-if='!containsPage(1)')
+      |...
+    li.pagination-item(v-for='page in pages')
+      button(type='button', @click='onClickPage(page.name)', :disabled='page.isDisabled', :class='{ active: isPageActive(page.name) }')
+        | {{ page.name }}
+    li.pagination-item.extra(v-if='!containsPage(totalPages)')
+      |...
+    li.pagination-item
+      button(type='button', @click='onClickNextPage', :disabled='isInLastPage')
+        | >>
+    li.pagination-item
+      button(type='button', @click='onClickLastPage', :disabled='isInLastPage')
+        | Last

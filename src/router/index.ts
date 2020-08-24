@@ -8,6 +8,7 @@ import SpinnerView from '../views/SpinnerView.vue';
 import AlertView from '../views/AlertView.vue';
 import PieChartView from '../views/PieChartView.vue';
 import LineChartView from '../views/LineChartView.vue';
+import PaginationView from '../views/PaginationView.vue';
 
 Vue.use(VueRouter);
 
@@ -21,6 +22,11 @@ const routes = [
     path: '/pieChart',
     name: 'pieChartView',
     component: PieChartView,
+  },
+  {
+    path: '/pagination',
+    name: 'paginationView',
+    component: PaginationView,
   },
   {
     path: '/lineChart',
