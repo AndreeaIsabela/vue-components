@@ -12,30 +12,30 @@ export default class Pagination extends Vue {
   }
 
   @Prop({ type: Number, required: true })
-  totalPages: number = 0;
+  totalPages;
 
   @Prop({ type: Number })
-  maxVisibleButtons: number = 3;
+  maxVisibleButtons;
 
   get startPage(): number {
-    // When on the first page
+    // When the first page is selected
     if (this.currentPage === 1) {
       return 1;
     }
-    // When on the last page
+    // When the last page is selected
     if (this.currentPage === this.totalPages) {
       return this.totalPages - this.maxVisibleButtons + 1;
     }
-    // When in between
+    // When another page is selected
     return this.currentPage - 1;
   }
 
-  get pages() {
+  get pages(): any[] {
     const range: any[] = [];
 
-    for (let i = this.startPage; i <= Math.min(this.startPage + this.maxVisibleButtons - 1, this.totalPages); i++ ) {
+    for (let i = this.startPage; i <= Math.min(this.startPage + this.maxVisibleButtons - 1, this.totalPages); i++) {
       range.push({
-        name: i,
+        index: i,
         isDisabled: i === this.currentPage
       });
     }
@@ -43,16 +43,16 @@ export default class Pagination extends Vue {
     return range;
   }
 
-  get isInFirstPage() {
+  get isOnFirstPage(): boolean {
     return this.currentPage === 1;
   }
 
-  get isInLastPage() {
+  get isOnLastPage(): boolean {
     return this.currentPage === this.totalPages;
   }
 
   public containsPage(pageNo: number): boolean {
-    return  this.pages.some(element => element.name === pageNo);
+    return this.pages.some(element => element.index === pageNo);
   }
 
   public isPageActive(page: number): boolean {
@@ -60,27 +60,27 @@ export default class Pagination extends Vue {
   }
 
   public onClickFirstPage(): void {
-    this.$emit('pagechanged', 1);
+    this.$emit('PageWasChanged', 1);
     this.currentPage = 1;
   }
 
   public onClickPreviousPage(): void {
-    this.$emit('pagechanged', this.currentPage - 1);
+    this.$emit('PageWasChanged', this.currentPage - 1);
     this.currentPage -= 1;
   }
 
   public onClickPage(page: number): void {
+    this.$emit('PageWasChanged', page);
     this.currentPage = page;
-    this.$emit('pagechanged', page);
   }
 
   public onClickNextPage(): void {
-    this.$emit('pagechanged', this.currentPage + 1);
+    this.$emit('PageWasChanged', this.currentPage + 1);
     this.currentPage += 1;
   }
 
   public onClickLastPage(): void {
-    this.$emit('pagechanged', this.totalPages);
+    this.$emit('PageWasChanged', this.totalPages);
     this.currentPage = this.totalPages;
   }
 }
