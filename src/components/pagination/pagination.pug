@@ -1,9 +1,9 @@
 div
   ul.pagination
-    li.pagination-item
+    li.pagination-item(v-if="shouldDisplayButton")
       button(type='button', @click='onClickFirstPage', :disabled='isOnFirstPage')
         | First
-    li.pagination-item
+    li.pagination-item(v-if="shouldDisplayButton")
       button(type='button', @click='onClickPreviousPage', :disabled='isOnFirstPage')
         | <<
     li.pagination-item.extra(v-if='!containsPage(1)')
@@ -13,9 +13,9 @@ div
         | {{ page.index }}
     li.pagination-item.extra(v-if='!containsPage(totalPages)')
       |...
-    li.pagination-item
+    li.pagination-item(v-if="shouldDisplayButton")
       button(type='button', @click='onClickNextPage', :disabled='isOnLastPage')
         | >>
-    li.pagination-item
+    li.pagination-item(v-if="shouldDisplayButton")
       button(type='button', @click='onClickLastPage', :disabled='isOnLastPage')
         | Last

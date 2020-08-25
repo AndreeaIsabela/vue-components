@@ -17,6 +17,10 @@ export default class Pagination extends Vue {
   @Prop({ type: Number })
   maxVisibleButtons;
 
+  get shouldDisplayButton(): boolean {
+    return this.maxVisibleButtons < this.totalPages;
+  }
+
   get startPage(): number {
     // When the first page is selected
     if (this.currentPage === 1) {
@@ -24,6 +28,10 @@ export default class Pagination extends Vue {
     }
     // When the last page is selected
     if (this.currentPage === this.totalPages) {
+      //Return page 1 if totalPages is lower or equal to maxVisibleButtons
+      if (this.maxVisibleButtons >= this.totalPages) {
+        return 1;
+      }
       return this.totalPages - this.maxVisibleButtons + 1;
     }
     // When another page is selected
